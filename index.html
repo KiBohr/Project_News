@@ -50,12 +50,15 @@
     </section>
   <!-- - Output here -->
     <section id="output-news" class="mb-20 flex flex-wrap gap-4 items-center justify-center">
-      <article class="bg-amber-100 p-4 rounded-b-sm flex flex-col">
-        <h2>titel</h2>
-        <p>author</p>
-        <p>description</p>
-        <img src="urlToImage" alt="picture of the article">
-        <a href="url">link</a>
+
+      <article class="bg-amber-100 p-6 rounded-b-sm flex flex-col items-center">
+        <h2 class="text-2xl">${articlesData.title}</h2>
+        <p class="text-[0.9rem]">${articlesData.author}</p>
+        <p>${articlesData.description}</p>
+        <div class="h-70 w-100">
+          <img class="object-cover rounded-sm" src="${articlesData.urlToImage}" alt="picture of the article">
+        </div>
+        <a href="${articlesData.url}">link</a>
       </article>
     </section>
   </main>
