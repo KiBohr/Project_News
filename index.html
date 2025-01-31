@@ -7,25 +7,26 @@
   <script type="module" src="./src/main.ts"></script>
   <title>Project-News</title>
 </head>
-<body>
+<body class="bg-amber-200 text-amber-950 m-5">
 
-  <header>
-    <h1>News</h1>
+  <header class="flex flex-col justify-center items-start mb-20">
+    <h1 class="text-8xl uppercase">News</h1>
+    <p>get your custom news here</p>
   </header>
 
   <main>
     <!-- - Form here -->
-    <section>
-      <form>
+    <section  class="flex flex-col gap-2 items-center mb-20">
+      <form class="opacity-80 flex flex-col px-10 py-5 rounded-sm gap-5 border-2 border-amber-800 rounded-b-sm text-l">
         <div>
-          <label for="search-input">Search for:</label>
-          <input type="text" id="search-input">
+          <label for="search-input">Keyword:</label>
+          <input class="bg-white" type="text" id="search-input">
         </div>
 
         <!-- ? languages -->
         <div>
-          <label for="language">Search for:</label>
-          <select name="lang" id="language">
+          <label for="language">Search in:</label>
+          <select class="bg-white" name="lang" id="language">
             <option value="en">English</option>
             <option value="de">German</option>
             <option value="fr">French</option>
@@ -37,27 +38,30 @@
         <!-- ?  sort-->
         <div>
           <label for="sort">Search by:</label>
-          <select name="sortNews" id="sort">
+          <select class="bg-white" name="sortNews" id="sort">
             <option value="relevancy">Relevancy</option>
             <option value="popularity">Popularity</option>
             <option value="publishedAt">Date</option>
           </select>
         </div>
 
-        <button id="search-button" type="button">Search</button>
+        <button class="border-2 border-amber-900 p-1 rounded-sm cursor-pointer w-[25%] self-center transition ease-out" id="search-button" type="button">Search</button>
       </form>
     </section>
   <!-- - Output here -->
-    <section>
-
-
-
+    <section id="output-news" class="mb-20 flex flex-wrap gap-4 items-center justify-center">
+      <article class="bg-amber-100 p-4 rounded-b-sm flex flex-col">
+        <h2>titel</h2>
+        <p>author</p>
+        <p>description</p>
+        <img src="urlToImage" alt="picture of the article">
+        <a href="url">link</a>
+      </article>
     </section>
-
   </main>
 
-  <footer>
-    <p>made by ⭐️Kywi⭐️</p>
+  <footer class="text-amber-800 text-[0.7rem] flex">
+    <p class="self-end italic transition ease-linear hover:animate-ping">made by Kywi</p>
   </footer>
   
 </body>
